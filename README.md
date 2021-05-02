@@ -12,3 +12,6 @@ python manage.py migrate
 
 # Criar super usuário
 python manage.py createsuperuser
+
+# Criar app
+python manage.py startapp website
