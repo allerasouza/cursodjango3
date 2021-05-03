@@ -10,8 +10,8 @@ class PostAdmin(admin.ModelAdmin): # Create customization class for Post
     search_fields = ['title', 'sub_title']
     # fields = ('title', 'sub_title', 'content')
 
-    def get_queryset(self, request):
-        return Post.objects.filter(deleted=False)
+    # def get_queryset(self, request):
+    #     return Post.objects.filter(deleted=False)
 
 # Register your models here.
 admin.site.register(Post, PostAdmin) # Apply customization to Post
