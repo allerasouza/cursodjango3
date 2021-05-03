@@ -15,3 +15,6 @@ python manage.py createsuperuser
 
 # Criar app
 python manage.py startapp website
+
+# Download strata template
+https://html5up.net/strata
