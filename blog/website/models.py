@@ -6,3 +6,10 @@ class Post(models.Model):
     sub_title = models.CharField(max_length=200)
     content = models.TextField()
     
+    def __str__(self): # Return title instead of "Post object" on object's name
+        return self.title
+
+    def full_name(self): # Add a new filed to Post
+        return self.title + self.sub_title
+
+    full_name.admin_order_field = 'title' # Allow new filed to be ordered
