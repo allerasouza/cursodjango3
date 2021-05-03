@@ -15,6 +15,7 @@ class Post(models.Model):
         choices=Categorias.choices,
         default=Categorias.GR,
     )
+    deleted = models.BooleanField(default=False)
     
     def __str__(self): # Return title instead of "Post object" on object's name
         return self.title
