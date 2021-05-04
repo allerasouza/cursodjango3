@@ -46,7 +46,13 @@
 							{% for post in posts %}
 								{% if post.deleted == False %}
 									<article class="col-6 col-12-xsmall work-item">
-										<a href="{% static 'images/fulls/01.jpg' %}" class="image fit thumb"><img src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
+										{% if post.imagem %}
+											<a href="{{ post.imagem.url }}" class="image fit thumb">
+												<img src="{{ post.imagem.url }}" alt="" width="200px" height="170px" /></a>
+										{% else %}
+											<a href="{% static 'images/fulls/01.jpg' %}" class="image fit thumb">
+												<img src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
+										{% endif %}
 										<h3>{{ post.title }}</h3>
 										<p>{{ post.sub_title }}</p>
 										<span>{{ post.get_category_label }}</span>

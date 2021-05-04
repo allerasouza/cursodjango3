@@ -16,6 +16,7 @@ class Post(models.Model):
         default=Categorias.GR,
     )
     deleted = models.BooleanField(default=False)
+    imagem = models.ImageField(upload_to='posts', null=True, blank=True)
     
     def __str__(self): # Return title instead of "Post object" on object's name
         return self.title
